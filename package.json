@@ -1,40 +1,60 @@
 {
   "name": "additionalui",
-  "version": "0.1.0",
-  "private": true,
-  "dependencies": {
-    "@testing-library/jest-dom": "^5.17.0",
-    "@testing-library/react": "^13.4.0",
-    "@testing-library/user-event": "^13.5.0",
-    "aui-accordion": "^1.0.3",
-    "react": "^18.2.0",
-    "react-dom": "^18.2.0",
-    "react-router-dom": "^6.22.3",
-    "react-scripts": "5.0.1",
-    "web-vitals": "^2.1.4"
+  "version": "2.1.0",
+  "description": "Additional UI offers a seamless website creation experience, empowering you to build stunning websites with ease. Additionally it provides drag and drop website builder",
+  "main": "index.js",
+  "module": "./src/index.ts",
+  "repository": "https://github.com/additionalui/additionalui.git",
+  "homepage": "https://additionalui.com",
+  "keywords": [
+    "additional ui",
+    "additionalui",
+    "html",
+    "css",
+    "javascript",
+    "typescript",
+    "tailwind",
+    "tailwind examples",
+    "tailwind components",
+    "tailwind components library",
+    "tailwind elements",
+    "tailwind library",
+    "tailwind sections",
+    "tailwind css",
+    "tailwind ui",
+    "tailwind css react",
+    "tailwind css next",
+    "tailwind css nextjs",
+    "tailwind css vue",
+    "tailwind css nuxtjs",
+    "tailwind css angular",
+    "tailwind css astro",
+    "tailwind css solidjs",
+    "tailwind css qwik",
+    "tailwind css svelte",
+    "tailwind css remix",
+    "tailwind css laravel"
+  ],
+  "author": "Jagannath Magupalli",
+  "license": "MIT",
+  "publishConfig": {
+    "access": "public"
   },
   "scripts": {
-    "start": "react-scripts start",
-    "build": "react-scripts build",
-    "test": "react-scripts test",
-    "eject": "react-scripts eject"
+    "watch": "webpack",
+    "pretty": "prettier --write \"./**/*.{js,jsx,ts,tsx,json}\"",
+    "generate-dts": "dts-bundle-generator --config dts-config.js"
   },
-  "eslintConfig": {
-    "extends": [
-      "react-app",
-      "react-app/jest"
-    ]
+  "devDependencies": {
+    "dts-bundle-generator": "^9.0.0",
+    "prettier": "^3.0.0",
+    "source-map-loader": "^4.0.1",
+    "terser-webpack-plugin": "^5.3.9",
+    "ts-loader": "^9.4.2",
+    "typescript": "^5.0.2",
+    "webpack-cli": "^5.0.1"
   },
-  "browserslist": {
-    "production": [
-      ">0.2%",
-      "not dead",
-      "not op_mini all"
-    ],
-    "development": [
-      "last 1 chrome version",
-      "last 1 firefox version",
-      "last 1 safari version"
-    ]
+  "dependencies": {
+    "@popperjs/core": "^2.11.2"
   }
 }
