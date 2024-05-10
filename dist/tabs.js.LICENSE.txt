@@ -1,0 +1,15 @@
+/*
+ * ASTabs
+ * @version: 1.9.0
+ * @author: Additional Sheet
+ * @license: Licensed under MIT (https://additionalui.com/docs/license)
+ * Copyright 2023 Additional Sheet
+ */
+
+/*
+ * Component
+ * @version: 1.9.0
+ * @author: Additional Sheet
+ * @license: Licensed under MIT (https://additionalui.com/docs/license)
+ * Copyright 2023 Additional Sheet
+ */

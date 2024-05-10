@@ -1,43 +1,46 @@
-const path = require("path");
-const TerserPlugin = require("terser-webpack-plugin");
+const path = require('path')
 
 module.exports = {
-    mode: "production",
+    mode: 'production',
     watch: true,
-    stats: "minimal",
     entry: {
-        index: "./src/index.ts",
-        // additionalui: "./src/index.ts",
-        accordion: "./src/plugins/accordion/index.ts",
-        // carousel: "./src/plugins/carousel/index.ts",
+        'additionalui': './src/index.js',
+        'accordion': './src/components/as-accordion/index.js',
+        'collapse': './src/components/as-collapse/index.js',
+        'dropdown': './src/components/as-dropdown/index.js',
+        'overlay': './src/components/as-overlay/index.js',
+        'remove-element': './src/components/as-remove-element/index.js',
+        'scrollspy': './src/components/as-scrollspy/index.js',
+        'tabs': './src/components/as-tabs/index.js',
+        'tooltip': './src/components/as-tooltip/index.js'
+    },
+    output: {
+        path: path.resolve(__dirname, 'dist'),
+        filename: '[name].js',
+        library: {
+            type: 'umd'
+        }
     },
     module: {
         rules: [
-            { test: /\.ts?$/, enforce: "pre", use: ["source-map-loader"] },
-            { test: /\.ts?$/, use: "ts-loader", exclude: /node_modules/ },
-        ],
+            {
+                test: /\.js$/,
+                enforce: 'pre',
+                use: ['source-map-loader'],
+            },
+            {
+                test: /\.js$/,
+                exclude: /node_modules/,
+                use: {
+                    loader: 'babel-loader',
+                    options: {
+                        presets: ['@babel/preset-env']
+                    }
+                }
+            }
+        ]
     },
-    resolve: { extensions: [".ts", ".js"] },
-    output: {
-        path: path.resolve(__dirname, "dist"),
-        filename: "[name].js",
-        library: { type: "umd" },
+    resolve: {
+        extensions: ['', '.js']
     },
-    optimization: {
-        minimize: true,
-        minimizer: [
-            new TerserPlugin({
-                extractComments: false,
-            }),
-        ],
-    },
-    // Additional configuration to generate additionalui.js in the root directory
-    // entry: {
-    //     additionalui: "./src/index.ts",
-    // },
-    // output: {
-    //     path: path.resolve(__dirname),
-    //     filename: "additionalui.js",
-    //     library: { type: "umd" },
-    // },
-};
+}

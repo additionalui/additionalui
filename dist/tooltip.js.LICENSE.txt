@@ -1,0 +1,16 @@
+/*
+ * Component
+ * @version: 1.9.0
+ * @author: Additional Sheet
+ * @license: Licensed under MIT (https://additionalui.com/docs/license)
+ * Copyright 2023 Additional Sheet
+ */
+
+/*
+* ASTooltips
+* @version: 1.4.0
+* @author: Additional Sheet
+* @requires: @popperjs/core ^2.11.2
+* @license: Licensed under MIT (https://additionalui.com/docs/license)
+* Copyright 2023 Additional Sheet
+*/
