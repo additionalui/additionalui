@@ -10,18 +10,18 @@ import Component from '../../core/Component';
 
 class ASScrollspy extends Component {
   constructor() {
-    super('[data-as-scrollspy] ');
+    super('[data-hs-scrollspy] ');
 
     this.activeSection = null;
   }
 
   init() {
     document.querySelectorAll(this.selector).forEach(($scrollspyEl) => {
-      const $scrollspyContentEl = document.querySelector($scrollspyEl.getAttribute('data-as-scrollspy'));
+      const $scrollspyContentEl = document.querySelector($scrollspyEl.getAttribute('data-hs-scrollspy'));
       const links = $scrollspyEl.querySelectorAll('[href]');
       const sections = $scrollspyContentEl.children;
-      const $scrollableEl = $scrollspyEl.getAttribute('data-as-scrollspy-scrollable-parent')
-        ? document.querySelector($scrollspyEl.getAttribute('data-as-scrollspy-scrollable-parent'))
+      const $scrollableEl = $scrollspyEl.getAttribute('data-hs-scrollspy-scrollable-parent')
+        ? document.querySelector($scrollspyEl.getAttribute('data-hs-scrollspy-scrollable-parent'))
         : document;
 
       Array.from(sections).forEach(($sectionEl) => {
@@ -67,7 +67,7 @@ class ASScrollspy extends Component {
       if ($relatedLinkEl) {
         $relatedLinkEl.classList.add('active');
 
-        const $groupEl = $relatedLinkEl.closest('[data-as-scrollspy-group]');
+        const $groupEl = $relatedLinkEl.closest('[data-hs-scrollspy-group]');
         if ($groupEl) {
           const $parentLinkEl = $groupEl.querySelector('[href]');
           if ($parentLinkEl) $parentLinkEl.classList.add('active');

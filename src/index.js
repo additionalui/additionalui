@@ -7,10 +7,11 @@
  */
 
 import './components/as-accordion';
+import './components/as-remove-element';
+// import './components/as-carousel';
 import './components/as-collapse';
 import './components/as-dropdown';
 import './components/as-overlay';
-import './components/as-remove-element';
 import './components/as-scrollspy';
 import './components/as-tabs';
 import './components/as-tooltip';

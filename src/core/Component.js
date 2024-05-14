@@ -1,11 +1,3 @@
-/*
- * Component
- * @version: 1.9.0
- * @author: Additional Sheet
- * @license: Licensed under MIT (https://additionalui.com/docs/license)
- * Copyright 2023 Additional Sheet
- */
-
 export default class Component {
   constructor(selector, config) {
     this.$collection = [];

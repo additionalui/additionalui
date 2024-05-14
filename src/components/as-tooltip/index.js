@@ -12,7 +12,7 @@ import {createPopper} from "@popperjs/core";
 
 class ASTooltip extends Component {
     constructor () {
-        super('.as-tooltip')
+        super('.hs-tooltip')
     }
 
     init () {
@@ -35,8 +35,8 @@ class ASTooltip extends Component {
     _hover ($tooltipEl) {
         if ($tooltipEl.classList.contains('show')) return
 
-        const $tooltipToggleEl = $tooltipEl.querySelector('.as-tooltip-toggle')
-        const $tooltipContentEl = $tooltipEl.querySelector('.as-tooltip-content')
+        const $tooltipToggleEl = $tooltipEl.querySelector('.hs-tooltip-toggle')
+        const $tooltipContentEl = $tooltipEl.querySelector('.hs-tooltip-content')
         const placement = this.getClassProperty($tooltipEl, '--placement')
 
         createPopper($tooltipToggleEl, $tooltipContentEl, {
@@ -64,8 +64,8 @@ class ASTooltip extends Component {
     }
 
     _focus ($tooltipEl) {
-        const $tooltipToggleEl = $tooltipEl.querySelector('.as-tooltip-toggle')
-        const $tooltipContentEl = $tooltipEl.querySelector('.as-tooltip-content')
+        const $tooltipToggleEl = $tooltipEl.querySelector('.hs-tooltip-toggle')
+        const $tooltipContentEl = $tooltipEl.querySelector('.hs-tooltip-content')
         const placement = this.getClassProperty($tooltipEl, '--placement')
         const strategy = this.getClassProperty($tooltipEl, '--strategy')
 
@@ -96,8 +96,8 @@ class ASTooltip extends Component {
     _click ($tooltipEl) {
         if ($tooltipEl.classList.contains('show')) return
 
-        const $tooltipToggleEl = $tooltipEl.querySelector('.as-tooltip-toggle')
-        const $tooltipContentEl = $tooltipEl.querySelector('.as-tooltip-content')
+        const $tooltipToggleEl = $tooltipEl.querySelector('.hs-tooltip-toggle')
+        const $tooltipContentEl = $tooltipEl.querySelector('.hs-tooltip-content')
         const placement = this.getClassProperty($tooltipEl, '--placement')
         const strategy = this.getClassProperty($tooltipEl, '--strategy')
 
@@ -129,7 +129,7 @@ class ASTooltip extends Component {
     }
 
     show ($tooltipEl) {
-        const $tooltipContentEl = $tooltipEl.querySelector('.as-tooltip-content')
+        const $tooltipContentEl = $tooltipEl.querySelector('.hs-tooltip-content')
         $tooltipContentEl.classList.remove('hidden')
 
         setTimeout(() => {
@@ -141,7 +141,7 @@ class ASTooltip extends Component {
     }
 
     hide ($tooltipEl) {
-        const $tooltipContentEl = $tooltipEl.querySelector('.as-tooltip-content')
+        const $tooltipContentEl = $tooltipEl.querySelector('.hs-tooltip-content')
 
         $tooltipEl.classList.remove('show')
 
