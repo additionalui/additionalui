@@ -2,7 +2,7 @@ import Component from '../../core/Component';
 
 class ASRemoveElement extends Component {
   constructor() {
-    super('[data-hs-remove-element]');
+    super('[data-as-remove-element]');
   }
 
   init() {
@@ -11,17 +11,17 @@ class ASRemoveElement extends Component {
         const $removeElementTrigger = e.target.closest(this.selector);
         if (!$removeElementTrigger) return;
 
-        const $removeEl = document.querySelector($removeElementTrigger.getAttribute('data-hs-remove-element'));
+        const $removeEl = document.querySelector($removeElementTrigger.getAttribute('data-as-remove-element'));
         if ($removeEl) {
-          // Toggle opacity class based on 'hs-removing'
-          if ($removeEl.classList.contains('hs-removing')) {
+          // Toggle opacity class based on 'as-removing'
+          if ($removeEl.classList.contains('as-removing')) {
             $removeEl.classList.remove('opacity-0');
           } else {
             $removeEl.classList.add('opacity-0');
           }
           
-          // Toggle hs-removing class
-          $removeEl.classList.toggle('hs-removing');
+          // Toggle as-removing class
+          $removeEl.classList.toggle('as-removing');
 
           // Remove element after transition duration
           setTimeout(() => {

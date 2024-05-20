@@ -1,6 +1,6 @@
 /*
  * ASOverlay
- * @version: 1.9.0
+ * @version: 2.5.3
  * @author: Additional Sheet
  * @license: Additional Sheet Libraries (https://additionalui.com/docs/license)
  * Copyright 2023 Additional Sheet
@@ -10,7 +10,7 @@ import Component from '../../core/Component';
 
 class ASOverlay extends Component {
   constructor() {
-    super('[data-hs-overlay]');
+    super('[data-as-overlay]');
 
     this.openNextOverlay = false;
   }
@@ -19,15 +19,15 @@ class ASOverlay extends Component {
     document.addEventListener('click', (e) => {
       const $targetEl = e.target;
       const $overlayToggleEl = $targetEl.closest(this.selector);
-      const $closeOverlayTriggerEl = e.target.closest('[data-hs-overlay-close]');
+      const $closeOverlayTriggerEl = e.target.closest('[data-as-overlay-close]');
       const $openedOverlayEl = e.target.getAttribute('aria-overlay') === 'true';
 
       if ($closeOverlayTriggerEl) {
-        return this.close($closeOverlayTriggerEl.closest('.hs-overlay.open'));
+        return this.close($closeOverlayTriggerEl.closest('.as-overlay.open'));
       }
 
       if ($overlayToggleEl) {
-        return this.toggle(document.querySelector($overlayToggleEl.getAttribute('data-hs-overlay')));
+        return this.toggle(document.querySelector($overlayToggleEl.getAttribute('data-as-overlay')));
       }
 
       if ($openedOverlayEl) {
@@ -37,11 +37,11 @@ class ASOverlay extends Component {
 
     document.addEventListener('keydown', (e) => {
       if (e.keyCode === 27) {
-        const $openedOverlayEl = document.querySelector('.hs-overlay.open');
+        const $openedOverlayEl = document.querySelector('.as-overlay.open');
         if (!$openedOverlayEl) return;
 
         setTimeout(() => {
-          $openedOverlayEl.getAttribute('data-hs-overlay-keyboard') !== 'false' ? this.close($openedOverlayEl) : null;
+          $openedOverlayEl.getAttribute('data-as-overlay-keyboard') !== 'false' ? this.close($openedOverlayEl) : null;
         });
       }
     });
@@ -56,7 +56,7 @@ class ASOverlay extends Component {
   open($overlayEl) {
     if (!$overlayEl) return;
 
-    const $openedOverlayEl = document.querySelector('.hs-overlay.open');
+    const $openedOverlayEl = document.querySelector('.as-overlay.open');
     const disabledScroll = this.getClassProperty($overlayEl, '--body-scroll', 'false') !== 'true';
 
     if ($openedOverlayEl) {
@@ -134,13 +134,13 @@ class ASOverlay extends Component {
   }
 
   _buildBackdrop($overlayEl) {
-    const backdropSelector = $overlayEl.getAttribute('data-hs-overlay-backdrop-container') || false;
+    const backdropSelector = $overlayEl.getAttribute('data-as-overlay-backdrop-container') || false;
     let $backdropEl = document.createElement('div');
     let backdropClasses =
-      'transition duration fixed inset-0 z-50 bg-gray-900 bg-opacity-50 dark:bg-opacity-80 hs-overlay-backdrop';
+      'transition duration fixed inset-0 z-50 bg-gray-900 bg-opacity-50 dark:bg-opacity-80 as-overlay-backdrop';
 
     for (const value of $overlayEl.classList.values()) {
-      if (value.startsWith('hs-overlay-backdrop-open:')) {
+      if (value.startsWith('as-overlay-backdrop-open:')) {
         backdropClasses += ` ${value}`;
       }
     }
@@ -161,7 +161,7 @@ class ASOverlay extends Component {
       $backdropEl.addEventListener('click', () => this.close($overlayEl), true);
     }
 
-    $backdropEl.setAttribute('data-hs-overlay-backdrop-template', '');
+    $backdropEl.setAttribute('data-as-overlay-backdrop-template', '');
     document.body.appendChild($backdropEl);
 
     setTimeout(() => {
@@ -170,7 +170,7 @@ class ASOverlay extends Component {
   }
 
   _destroyBackdrop() {
-    const $backdropEl = document.querySelector('[data-hs-overlay-backdrop-template]');
+    const $backdropEl = document.querySelector('[data-as-overlay-backdrop-template]');
 
     if (!$backdropEl) return;
 

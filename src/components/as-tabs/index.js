@@ -1,6 +1,6 @@
 /*
  * ASTabs
- * @version: 1.9.0
+ * @version: 2.5.3
  * @author: Additional Sheet
  * @license: Licensed under MIT (https://additionalui.com/docs/license)
  * Copyright 2023 Additional Sheet
@@ -10,7 +10,7 @@ import Component from '../../core/Component';
 
 class ASTabs extends Component {
   constructor() {
-    super('[data-hs-tab]');
+    super('[data-as-tab]');
   }
 
   init() {
@@ -25,12 +25,12 @@ class ASTabs extends Component {
       }
     });
 
-    document.querySelectorAll('[hs-data-tab-select]').forEach(($tabNavWithSelectEl) => {
-      const $selectEl = document.querySelector($tabNavWithSelectEl.getAttribute('hs-data-tab-select'));
+    document.querySelectorAll('[as-data-tab-select]').forEach(($tabNavWithSelectEl) => {
+      const $selectEl = document.querySelector($tabNavWithSelectEl.getAttribute('as-data-tab-select'));
       if (!$selectEl) return;
 
       $selectEl.addEventListener('change', (e) => {
-        const $tabToggleEl = document.querySelector(`[data-hs-tab="${e.target.value}"]`);
+        const $tabToggleEl = document.querySelector(`[data-as-tab="${e.target.value}"]`);
         if (!$tabToggleEl) return;
         this.open($tabToggleEl);
       });
@@ -38,12 +38,12 @@ class ASTabs extends Component {
   }
 
   open($tabToggleEl) {
-    const $tabEl = document.querySelector($tabToggleEl.getAttribute('data-hs-tab'));
+    const $tabEl = document.querySelector($tabToggleEl.getAttribute('data-as-tab'));
     const $tabToggleEls = [...$tabToggleEl.parentElement.children];
     const $tabEls = [...$tabEl.parentElement.children];
-    const $tabNavWithSelectEl = $tabToggleEl.closest('[hs-data-tab-select]');
+    const $tabNavWithSelectEl = $tabToggleEl.closest('[as-data-tab-select]');
     const $selectEl = $tabNavWithSelectEl
-      ? document.querySelector($tabNavWithSelectEl.getAttribute('data-hs-tab'))
+      ? document.querySelector($tabNavWithSelectEl.getAttribute('data-as-tab'))
       : null;
 
     $tabToggleEls.forEach(($tab) => $tab.classList.remove('active'));
@@ -56,7 +56,7 @@ class ASTabs extends Component {
     this._dispatch('change.hs.tab', $tabToggleEl, $tabToggleEl);
 
     if ($selectEl) {
-      $selectEl.value = $tabToggleEl.getAttribute('data-hs-tab');
+      $selectEl.value = $tabToggleEl.getAttribute('data-as-tab');
     }
   }
 
@@ -65,7 +65,7 @@ class ASTabs extends Component {
     if (!$tabButtonEl) return;
 
     const $navEl = $tabButtonEl.closest('[role="tablist"]');
-    const vertical = $navEl.getAttribute('data-hs-tabs-vertical') === 'true';
+    const vertical = $navEl.getAttribute('data-as-tabs-vertical') === 'true';
 
     if (vertical ? e.keyCode === 38 : e.keyCode === 37) {
       e.preventDefault();

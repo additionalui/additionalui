@@ -27,13 +27,13 @@ npm i additionalui
 2. Include the JavaScript <code><script> </script></code> that powers the interactive elements near the end of your <code>&lt;body&gt;</code> tag:
 
 ```html
-<script src="./node_modules/additionalui/dist/additionalui.js"></script>
+<script src="./node_modules/additionalui/dist/aui.min.js"></script>
 ```
 
 3. Or you can add below script tag directly in your index.html file
 
 ```html
-<script src="https://unpkg.com/additionalui@2.0.0/dist/additionalui.js"></script>
+<script src="https://unpkg.com/additionalui@2.5.3/dist/aui.min.js"></script>
 ```
 
 ## <a href="https://additionalui.com/editor">Try Editor</a>

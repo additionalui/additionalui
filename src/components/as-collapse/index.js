@@ -1,6 +1,6 @@
 /*
  * ASCollapse
- * @version: 1.9.0
+ * @version: 2.5.3
  * @author: Additional Sheet
  * @license: Licensed under MIT (https://additionalui.com/docs/license)
  * Copyright 2023 Additional Sheet
@@ -10,7 +10,7 @@ import Component from '../../core/Component';
 
 class ASCollapse extends Component {
   constructor() {
-    super('[data-hs-collapse]');
+    super('[data-as-collapse]');
   }
 
   init() {
@@ -19,7 +19,7 @@ class ASCollapse extends Component {
       const $collapseToggleEl = $targetEl.closest(this.selector);
 
       if ($collapseToggleEl) {
-        const collapseEls = document.querySelectorAll($collapseToggleEl.getAttribute('data-hs-collapse'));
+        const collapseEls = document.querySelectorAll($collapseToggleEl.getAttribute('data-as-collapse'));
 
         this.toggle(collapseEls);
       }
@@ -40,7 +40,7 @@ class ASCollapse extends Component {
     $collapseEl.style.height = 0;
 
     document.querySelectorAll(this.selector).forEach(($toggleEl) => {
-      if ($collapseEl.closest($toggleEl.getAttribute('data-hs-collapse'))) {
+      if ($collapseEl.closest($toggleEl.getAttribute('data-as-collapse'))) {
         $toggleEl.classList.add('open');
       }
     });
@@ -74,14 +74,14 @@ class ASCollapse extends Component {
       this._fireEvent('hide', $collapseEl);
       this._dispatch('hide.hs.collapse', $collapseEl, $collapseEl);
 
-      $collapseEl.querySelectorAll('.hs-mega-menu-content.block').forEach(($megaMenuEl) => {
+      $collapseEl.querySelectorAll('.as-mega-menu-content.block').forEach(($megaMenuEl) => {
         $megaMenuEl.classList.remove('block');
         $megaMenuEl.classList.add('hidden');
       });
     });
 
     document.querySelectorAll(this.selector).forEach(($toggleEl) => {
-      if ($collapseEl.closest($toggleEl.getAttribute('data-hs-collapse'))) {
+      if ($collapseEl.closest($toggleEl.getAttribute('data-as-collapse'))) {
         $toggleEl.classList.remove('open');
       }
     });

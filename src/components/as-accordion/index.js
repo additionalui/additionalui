@@ -1,6 +1,6 @@
 /*
  * ASAccordion
- * @version: 1.9.0
+ * @version: 2.5.3
  * @author: Additional Sheet
  * @license: Licensed under MIT (https://additionalui.com/docs/license)
  * Copyright 2023 Additional Sheet
@@ -9,15 +9,15 @@ import Component from '../../core/Component';
 
 class ASAccordion extends Component {
   constructor() {
-    super('.hs-accordion');
+    super('.as-accordion');
   }
 
   init() {
     document.addEventListener('click', (e) => {
       const $targetEl = e.target;
       const $accordionEl = $targetEl.closest(this.selector);
-      const $accordionToggleEl = $targetEl.closest('.hs-accordion-toggle');
-      const $accordionGroupEl = $targetEl.closest('.hs-accordion-group');
+      const $accordionToggleEl = $targetEl.closest('.as-accordion-toggle');
+      const $accordionGroupEl = $targetEl.closest('.as-accordion-group');
       if ($accordionEl && $accordionGroupEl && $accordionToggleEl) {
         this._hideAll($accordionEl);
 
@@ -27,9 +27,9 @@ class ASAccordion extends Component {
   }
 
   show($accordionEl) {
-    $accordionEl.classList.add('hs-accordion-active');
+    $accordionEl.classList.add('as-accordion-active');
   
-    const $accordionContentEl = $accordionEl.querySelector('.hs-accordion-content');
+    const $accordionContentEl = $accordionEl.querySelector('.as-accordion-content');
   
     $accordionContentEl.style.display = 'block';
     $accordionContentEl.style.height = 0;
@@ -38,7 +38,7 @@ class ASAccordion extends Component {
     });
   
     this.afterTransition($accordionContentEl, () => {
-      if (!$accordionEl.classList.contains('hs-accordion-active')) return;
+      if (!$accordionEl.classList.contains('as-accordion-active')) return;
       $accordionContentEl.style.height = '';
   
       this._fireEvent('open', $accordionEl);
@@ -47,9 +47,9 @@ class ASAccordion extends Component {
   }
   
   hide($accordionEl) {
-    $accordionEl.classList.remove('hs-accordion-active');
+    $accordionEl.classList.remove('as-accordion-active');
   
-    const $accordionContentEl = $accordionEl.querySelector('.hs-accordion-content');
+    const $accordionContentEl = $accordionEl.querySelector('.as-accordion-content');
   
     $accordionContentEl.style.height = `${$accordionContentEl.scrollHeight}px`;
     setTimeout(() => {
@@ -57,7 +57,7 @@ class ASAccordion extends Component {
     });
   
     this.afterTransition($accordionContentEl, () => {
-      if ($accordionEl.classList.contains('hs-accordion-active')) return;
+      if ($accordionEl.classList.contains('as-accordion-active')) return;
       $accordionContentEl.style.display = '';
   
       this._fireEvent('hide', $accordionEl);
@@ -67,9 +67,9 @@ class ASAccordion extends Component {
   
 
   _hideAll($currentaccordionEl) {
-    const $accordionGroupEl = $currentaccordionEl.closest('.hs-accordion-group');
+    const $accordionGroupEl = $currentaccordionEl.closest('.as-accordion-group');
 
-    if ($accordionGroupEl.hasAttribute('data-hs-accordion-always-open')) return;
+    if ($accordionGroupEl.hasAttribute('data-as-accordion-always-open')) return;
 
     $accordionGroupEl.querySelectorAll(this.selector).forEach(($accordionEl) => {
       if ($currentaccordionEl !== $accordionEl) {

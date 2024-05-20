@@ -6,7 +6,7 @@ module.exports = {
     entry: {
         'aui.min': './src/index.js',
         'accordion': './src/components/as-accordion/index.js',
-        // 'carousel': './src/components/as-carousel/index.js',
+        'carousel': './src/components/as-carousel/index.js',
         'collapse': './src/components/as-collapse/index.js',
         'dropdown': './src/components/as-dropdown/index.js',
         'overlay': './src/components/as-overlay/index.js',

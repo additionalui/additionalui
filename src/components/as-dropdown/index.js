@@ -3,7 +3,7 @@ import Component from '../../core/Component';
 
 class ASDropdown extends Component {
   constructor() {
-    super('.hs-dropdown');
+    super('.as-dropdown');
 
     this.dropdowns = document.querySelectorAll(this.selector);
     this.init();
@@ -11,8 +11,8 @@ class ASDropdown extends Component {
 
   init() {
     this.dropdowns.forEach((dropdown) => {
-      const button = dropdown.querySelector('.hs-dropdown-toggle');
-      const menu = dropdown.querySelector('.hs-dropdown-menu');
+      const button = dropdown.querySelector('.as-dropdown-toggle');
+      const menu = dropdown.querySelector('.as-dropdown-menu');
 
       button.addEventListener('click', () => {
         this.toggleDropdown(dropdown, menu);
