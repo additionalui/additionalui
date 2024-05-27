@@ -1,6 +1,6 @@
 /*
  * ASOverlay
- * @version: 2.5.3
+ * @version: 2.5.4
  * @author: Additional Sheet
  * @license: Additional Sheet Libraries (https://additionalui.com/docs/license)
  * Copyright 2023 Additional Sheet

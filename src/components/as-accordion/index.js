@@ -1,6 +1,6 @@
 /*
  * ASAccordion
- * @version: 2.5.3
+ * @version: 2.5.4
  */
 import Component from '../../core/Component';
 
