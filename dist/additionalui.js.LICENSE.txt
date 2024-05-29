@@ -1,6 +1,6 @@
 /*
  * ASAccordion
- * @version: 2.5.4
+ * @version: 2.5.5
  * @author: Additional Sheet
  * @license: Licensed under MIT (https://additionalui.com/docs/license)
  * Copyright 2023 Additional Sheet
@@ -8,7 +8,7 @@
 
 /*
  * ASCollapse
- * @version: 2.5.4
+ * @version: 2.5.5
  * @author: Additional Sheet
  * @license: Licensed under MIT (https://additionalui.com/docs/license)
  * Copyright 2023 Additional Sheet
@@ -16,7 +16,7 @@
 
 /*
  * ASDropdown
- * @version: 2.5.4
+ * @version: 2.5.5
  * @author: Additional Sheet
  * @requires: @popperjs/core ^2.11.2
  * @license: Licensed under MIT (https://additionalui.com/docs/license)
@@ -25,7 +25,7 @@
 
 /*
  * ASOverlay
- * @version: 2.5.4
+ * @version: 2.5.5
  * @author: Additional Sheet
  * @license: Additional Sheet Libraries (https://additionalui.com/docs/license)
  * Copyright 2023 Additional Sheet
@@ -33,7 +33,7 @@
 
 /*
  * ASScrollspy
- * @version: 2.5.4
+ * @version: 2.5.5
  * @author: Additional Sheet
  * @license: Licensed under MIT (https://additionalui.com/docs/license)
  * Copyright 2023 Additional Sheet
@@ -41,7 +41,7 @@
 
 /*
  * ASTabs
- * @version: 2.5.4
+ * @version: 2.5.5
  * @author: Additional Sheet
  * @license: Licensed under MIT (https://additionalui.com/docs/license)
  * Copyright 2023 Additional Sheet
@@ -49,7 +49,7 @@
 
 /*
  * Component
- * @version: 2.5.4
+ * @version: 2.5.5
  * @author: Additional Sheet
  * @license: Licensed under MIT (https://additionalui.com/docs/license)
  * Copyright 2023 Additional Sheet
@@ -57,7 +57,7 @@
 
 /*
  * Util
- * @version: 2.5.4
+ * @version: 2.5.5
  * @author: Additional Sheet
  * @license: Licensed under MIT (https://additionalui.com/docs/license)
  * Copyright 2023 Additional Sheet

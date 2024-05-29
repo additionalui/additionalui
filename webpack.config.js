@@ -14,7 +14,9 @@ module.exports = {
         'scrollspy': './src/components/as-scrollspy/index.js',
         'tabs': './src/components/as-tabs/index.js',
         'tooltip': './src/components/as-tooltip/index.js',
-        'dropdown-dots': './src/components/as-dropdown-dots/index.js'
+        'dropdown-dots': './src/components/as-dropdown-dots/index.js',
+        'clipboard': './src/components/as-clipboard/index.js',
+        'speeddial': './src/components/as-speed-dial/index.js'
     },
     output: {
         path: path.resolve(__dirname, 'dist'),

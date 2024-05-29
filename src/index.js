@@ -1,6 +1,6 @@
 /*
  * Index
- * @version: 2.5.4
+ * @version: 2.5.5
  * @author: Additional Sheet
  * @license: Licensed under MIT (https://additionalui.com/docs/license)
  * Copyright 2023 Additional Sheet
@@ -15,3 +15,5 @@ import './components/as-overlay';
 import './components/as-scrollspy';
 import './components/as-tabs';
 import './components/as-tooltip';
+import './components/as-clipboard';
+import './components/as-speed-dial';

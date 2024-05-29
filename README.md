@@ -33,22 +33,22 @@ npm i additionalui
 3. Or you can add below script tag directly in your index.html file
 
 ```html
-<script src="https://unpkg.com/additionalui@2.5.4/dist/aui.min.js"></script>
+<script src="https://unpkg.com/additionalui@2.5.5/dist/aui.min.js"></script>
 ```
 
 ## <a href="https://additionalui.com/editor">Try Editor</a>
 [![Hero Image](https://additionalui.com/images/hero-light.png)](https://additionalui.com/editor)
 
-## <a href="https://additionalui.com/editor">Demo Examples</a>
+## <a href="https://additionalui.com/examples">Demo Examples</a>
 [![Hero Image](https://static.additionalsheet.com/images/others/2024-05-01Screenshot%202024-05-01%20233434.png)](https://additionalui.com/examples)
 
-## <a href="https://additionalui.com/editor">Demo Components</a>
+## <a href="https://additionalui.com/docs/accordion">Demo Components</a>
 [![Hero Image](https://static.additionalsheet.com/images/others/2024-05-01Screenshot%202024-05-01%20233450.png)](https://additionalui.com/docs/accordion)
 
-## <a href="https://additionalui.com/editor">Demo Templates</a>
+## <a href="https://additionalui.com/templates">Demo Templates</a>
 [![Hero Image](https://static.additionalsheet.com/images/others/2024-05-01Screenshot%202024-05-01%20233606.png)](https://additionalui.com/templates)
 
-## <a href="https://additionalui.com/editor">Themes</a>
+## <a href="https://additionalui.com/blocks">Themes</a>
 [![Hero Image](https://static.additionalsheet.com/images/others/2024-05-01Screenshot%202024-05-01%20233501.png)](https://additionalui.com/templates)
 
 
