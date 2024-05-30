@@ -33,7 +33,7 @@ npm i additionalui
 3. Or you can add below script tag directly in your index.html file
 
 ```html
-<script src="https://unpkg.com/additionalui@2.5.5/dist/aui.min.js"></script>
+<script src="https://unpkg.com/additionalui@2.5.6/dist/aui.min.js"></script>
 ```
 
 ## <a href="https://additionalui.com/editor">Try Editor</a>

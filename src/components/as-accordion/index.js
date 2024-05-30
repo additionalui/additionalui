@@ -1,6 +1,6 @@
 /*
  * ASAccordion
- * @version: 2.5.5
+ * @version: 2.5.6
  */
 import Component from '../../core/Component';
 
@@ -69,12 +69,14 @@ class ASAccordion extends Component {
     const $plusIcon = $accordionEl.querySelector('[data-icon="plus"]');
     const $minusIcon = $accordionEl.querySelector('[data-icon="minus"]');
 
-    if (isActive) {
-      $plusIcon.classList.add('hidden');
-      $minusIcon.classList.remove('hidden');
-    } else {
-      $plusIcon.classList.remove('hidden');
-      $minusIcon.classList.add('hidden');
+    if ($plusIcon && $minusIcon) { // Check if icons exist
+      if (isActive) {
+        $plusIcon.classList.add('hidden');
+        $minusIcon.classList.remove('hidden');
+      } else {
+        $plusIcon.classList.remove('hidden');
+        $minusIcon.classList.add('hidden');
+      }
     }
   }
 
