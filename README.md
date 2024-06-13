@@ -2,17 +2,17 @@
 
 <a href="https://additionalui.com"><img src="https://additionalui.com/logo.png" alt="Logo" width="200" height="auto"></a>
 
-AdditionalUI offers a comprehensive collection of open-source prebuilt UI components, leveraging the utility-first approach of the Tailwind CSS framework.
+Additional UI offers a comprehensive collection of open-source prebuilt UI components, leveraging the utility-first approach of the Tailwind CSS framework.
 
 [![License: MIT](https://img.shields.io/badge/License-MIT-yellow.svg)](https://opensource.org/licenses/MIT)
 
-## Why use AdditionalUI?
+## Why use Additional UI?
 
-Based on the Tailwind CSS utility classes, AdditionalUI's prebuilt components and UI elements help you quickly design and customize responsive mobile-first websites with the components a website needs, including buttons, dropdowns, navigation bars, modals, and more.
+Based on the Tailwind CSS utility classes, Additional UI's prebuilt components and UI elements help you quickly design and customize responsive mobile-first websites with the components a website needs, including buttons, dropdowns, navigation bars, modals, and more.
 
 ## Getting Started
 
-This guide will help you get started with AdditionalUI, including how to run, customize, update, and integrate your project!
+This guide will help you get started with Additional UI, including how to run, customize, update, and integrate your project!
 
 First, you need to make sure that you have a working <a href="https://tailwindcss.com/">Tailwind CSS</a>  installed and that you also have <a href="https://nodejs.org/en/">Node</a> and <a href="https://www.npmjs.com/">NPM</a> installed on your machine.
 
@@ -33,7 +33,7 @@ npm i additionalui
 3. Or you can add below script tag directly in your index.html file
 
 ```html
-<script src="https://unpkg.com/additionalui@2.5.7/dist/aui.min.js"></script>
+<script src="https://unpkg.com/additionalui@2.5.9/dist/aui.min.js"></script>
 ```
 
 
@@ -66,5 +66,5 @@ For help, discussion about best practices, or any other conversation that would 
 
 ## License
 
-AdditionalUI is Open Source project and licensed
-All brand icons are trademarks of their respective owners. The use of these trademarks does not indicate endorsement of the trademark holder by AdditionalUI, nor vice versa.
+Additional UI is Open Source project and licensed
+All brand icons are trademarks of their respective owners. The use of these trademarks does not indicate endorsement of the trademark holder by Additional UI, nor vice versa.

@@ -1,7 +1,7 @@
 {
   "name": "additionalui",
-  "version": "2.5.7",
-  "description": "AdditionalUI is an open-source set of prebuilt UI components based on the utility-first Tailwind CSS framework.",
+  "version": "2.5.9",
+  "description": "Additional UI is an open-source set of prebuilt UI components based on the utility-first Tailwind CSS framework.",
   "main": "dist/aui.min.js",
   "repository": "https://github.com/additionalui/additionalui",
   "homepage": "https://additionalui.com",

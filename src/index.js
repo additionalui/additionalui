@@ -1,6 +1,6 @@
 /*
  * Index
- * @version: 2.5.7
+ * @version: 2.5.9
  * @author: Additional Sheet
  * @license: Licensed under MIT (https://additionalui.com/docs/license)
  * Copyright 2023 Additional Sheet

@@ -1,5 +1,6 @@
 # See http://help.github.com/ignore-files/ for more about ignoring files.
 
+
 # compiled output
 /tmp
 /out-tsc
@@ -60,6 +61,10 @@ yarn-error.log*
 # Dependency directories
 node_modules/
 jspm_packages/
+
+# Backend
+backend/
+packages/
 
 # Optional npm cache directory
 .npm
