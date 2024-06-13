@@ -16,7 +16,7 @@ class ASCarousel {
     }
   
     init() {
-      this.createCollection(window.$hsCarouselCollection, this);
+      this.createCollection(window.$asCarouselCollection, this);
       if (this.inner) {
         this.calculateWidth();
       }
@@ -66,7 +66,7 @@ class ASCarousel {
         });
       }
       this.el.classList.add("init");
-      this.el.addEventListener("touchstart", (event) => {
+      this.el.addEventListener("toucastart", (event) => {
         this.touchX.start = event.changedTouches[0].screenX;
       });
       this.el.addEventListener("touchend", (event) => {
@@ -206,16 +206,16 @@ class ASCarousel {
     }
   
     static getInstance(selector, createIfNotExists) {
-      const instance = window.$hsCarouselCollection.find((item) => item.element.el === (typeof selector === "string" ? document.querySelector(selector) : selector));
+      const instance = window.$asCarouselCollection.find((item) => item.element.el === (typeof selector === "string" ? document.querySelector(selector) : selector));
       return instance ? (createIfNotExists ? instance : instance.element) : null;
     }
   
     static autoInit() {
-      if (!window.$hsCarouselCollection) {
-        window.$hsCarouselCollection = [];
+      if (!window.$asCarouselCollection) {
+        window.$asCarouselCollection = [];
       }
       document.querySelectorAll("[data-as-carousel]:not(.--prevent-on-load-init)").forEach((element) => {
-        if (!window.$hsCarouselCollection.find((item) => item.element.el === element)) {
+        if (!window.$asCarouselCollection.find((item) => item.element.el === element)) {
           new ASCarousel(element);
         }
       });
@@ -227,8 +227,8 @@ class ASCarousel {
   });
   
   window.addEventListener("resize", () => {
-    if (!window.$hsCarouselCollection) return false;
-    window.$hsCarouselCollection.forEach((instance) => {
+    if (!window.$asCarouselCollection) return false;
+    window.$asCarouselCollection.forEach((instance) => {
       instance.element.recalculateWidth();
     });
   });  

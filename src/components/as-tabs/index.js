@@ -1,11 +1,3 @@
-/*
- * ASTabs
- * @version: 2.5.6
- * @author: Additional Sheet
- * @license: Licensed under MIT (https://additionalui.com/docs/license)
- * Copyright 2023 Additional Sheet
- */
-
 import Component from '../../core/Component';
 
 class ASTabs extends Component {
@@ -53,7 +45,7 @@ class ASTabs extends Component {
     $tabEl.classList.remove('hidden');
 
     this._fireEvent('change', $tabToggleEl);
-    this._dispatch('change.hs.tab', $tabToggleEl, $tabToggleEl);
+    this._dispatch('change.as.tab', $tabToggleEl, $tabToggleEl);
 
     if ($selectEl) {
       $selectEl.value = $tabToggleEl.getAttribute('data-as-tab');

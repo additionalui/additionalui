@@ -1,7 +1,0 @@
-/*
-* ASTooltip
-* @version: 1.4.0
-* @requires: @popperjs/core ^2.11.2
-* @license: Licensed under MIT (https://additionalui.com/docs/license)
-* Copyright 2023 Additional Sheet
-*/

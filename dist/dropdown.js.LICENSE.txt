@@ -1,8 +1,0 @@
-/*
- * ASDropdown
- * @version: 2.5.6
- * @author: Additional Sheet
- * @requires: @popperjs/core ^2.11.2
- * @license: Licensed under MIT (https://additionalui.com/docs/license)
- * Copyright 2023 Additional Sheet
- */

@@ -79,7 +79,7 @@ class ASScrollspy extends Component {
     const $viewEl = $scrollableEl === document ? window : $scrollableEl;
 
     this._fireEvent('scroll', $scrollspyEl);
-    this._dispatch('scroll.hs.scrollspy', $scrollspyEl, $scrollspyEl);
+    this._dispatch('scroll.as.scrollspy', $scrollspyEl, $scrollspyEl);
 
     window.history.replaceState(null, null, $link.getAttribute('href'));
 

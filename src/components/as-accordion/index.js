@@ -1,7 +1,3 @@
-/*
- * ASAccordion
- * @version: 2.5.6
- */
 import Component from '../../core/Component';
 
 class ASAccordion extends Component {
@@ -41,7 +37,7 @@ class ASAccordion extends Component {
     this.afterTransition($accordionContentEl, () => {
       $accordionContentEl.style.height = '';
       this._fireEvent('open', $accordionEl);
-      this._dispatch('open.hs.accordion', $accordionEl, $accordionEl);
+      this._dispatch('open.as.accordion', $accordionEl, $accordionEl);
     });
   }
 
@@ -61,7 +57,7 @@ class ASAccordion extends Component {
       }
       $accordionContentEl.style.height = '';
       this._fireEvent('hide', $accordionEl);
-      this._dispatch('hide.hs.accordion', $accordionEl, $accordionEl);
+      this._dispatch('hide.as.accordion', $accordionEl, $accordionEl);
     });
   }
 

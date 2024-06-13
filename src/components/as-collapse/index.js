@@ -1,11 +1,3 @@
-/*
- * ASCollapse
- * @version: 2.5.6
- * @author: Additional Sheet
- * @license: Licensed under MIT (https://additionalui.com/docs/license)
- * Copyright 2023 Additional Sheet
- */
-
 import Component from '../../core/Component';
 
 class ASCollapse extends Component {
@@ -53,7 +45,7 @@ class ASCollapse extends Component {
       $collapseEl.style.height = '';
 
       this._fireEvent('open', $collapseEl);
-      this._dispatch('open.hs.collapse', $collapseEl, $collapseEl);
+      this._dispatch('open.as.collapse', $collapseEl, $collapseEl);
     });
   }
 
@@ -72,7 +64,7 @@ class ASCollapse extends Component {
       $collapseEl.style.height = null;
 
       this._fireEvent('hide', $collapseEl);
-      this._dispatch('hide.hs.collapse', $collapseEl, $collapseEl);
+      this._dispatch('hide.as.collapse', $collapseEl, $collapseEl);
 
       $collapseEl.querySelectorAll('.as-mega-menu-content.block').forEach(($megaMenuEl) => {
         $megaMenuEl.classList.remove('block');
